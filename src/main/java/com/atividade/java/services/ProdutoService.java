@@ -24,12 +24,12 @@ public class ProdutoService {
         return produtoRepository.findAll();
     }
     
-    public Optional<ProdutoModel> findById(Long id) {
-        return produtoRepository.findById(id);
+    public ProdutoModel findById(Long id) {
+        return produtoRepository.findById(id).get();
     }
 
     public void deletar(Long id) {
         produtoRepository.deleteById(id);
     }
-    
+
 }
